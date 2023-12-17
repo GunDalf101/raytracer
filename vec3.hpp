@@ -34,11 +34,11 @@ class vec3
         inline vec3& operator*=(const double t);
         inline vec3& operator/=(const double t);
 
-        inline double length() const
+        inline double magnitude() const
         {
             return sqrt(e[0]*e[0] + e[1]*e[1] + e[2]*e[2]);
         }
-        inline double squared_length() const
+        inline double squared_magnitude() const
         {
             return e[0]*e[0] + e[1]*e[1] + e[2]*e[2];
         }
@@ -165,7 +165,7 @@ inline vec3& vec3::operator/=(const double t)
 
 inline vec3 unit_vector(vec3 v)
 {
-    return v / v.length();
+    return v / v.magnitude();
 }
 
 
